@@ -1,0 +1,39 @@
+#include <iostream>
+#include <iomanip>
+
+// Define main function
+int main() {
+    // Declare variables
+    std::string party1, party2, party3;
+    int votes1, votes2, votes3;
+    double totalVotes, percent1, percent2, percent3;
+    
+    // Get party names
+    std::cout << "Enter the name of the first party: ";
+    std::cin >> party1;
+    std::cout << "\nEnter the name of the second party: ";
+    std::cin >> party2;
+    std::cout << "\nEnter the name of the third party: ";
+    std::cin >> party3;
+    
+    // Get number of votes
+    std::cout << "\nEnter the number of votes for the " << party1 << " party in the last mayoral election: ";
+    std::cin >>  votes1;
+    std::cout << "\nEnter the number of votes for the " << party2 << " party in the last mayoral election: ";
+    std::cin >>  votes2;
+    std::cout << "\nEnter the number of votes for the " << party3 << " party in the last mayoral election: ";
+    std::cin >>  votes3;
+    
+    // Calculate total number of votes and percentage of votes for each party
+    totalVotes = votes1 + votes2 + votes3;
+    percent1 = (votes1/totalVotes)*100;
+    percent2 = (votes2/totalVotes)*100;
+    percent3 = (votes3/totalVotes)*100;
+    
+    // Display results
+    std::cout << std::right << std::setw(10) << "The " << party1 << " party received " << percent1 << "% of votes." << std::endl;
+    std::cout << std::right << std::setw(10) << "The " << party2 << " party received " << percent2 << "% of votes." << std::endl;
+    std::cout << std::right << std::setw(10) << "The " << party3 << " party received " << percent3 << "% of votes." << std::endl;
+    
+    return 0;
+}
